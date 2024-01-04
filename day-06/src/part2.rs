@@ -1,9 +1,6 @@
 use nom::{
     bytes::complete::tag,
-    character::{
-        complete,
-        complete::{alpha0, digit1, line_ending, space1},
-    },
+    character::complete::{alpha0, digit1, line_ending, space1},
     combinator::opt,
     multi::separated_list1,
     sequence::terminated,
