@@ -17,6 +17,11 @@ run day:
         cargo run -p {{day}} --bin part1
         cargo run -p {{day}} --bin part2
 
+# run a day
+release-run day:
+        cargo run --release -p {{day}} --bin part1
+        cargo run --release -p {{day}} --bin part2
+
 # check a day
 check day:
         cargo check -p {{day}}
