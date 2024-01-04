@@ -15,7 +15,7 @@ fn parse(input: &str) -> Vec<HandBids> {
     input
         .lines()
         .map(|line| {
-            let (hand, bid) = line.split_once(" ").unwrap();
+            let (hand, bid) = line.split_once(' ').unwrap();
             HandBids {
                 hand: Hand::from_str(hand).unwrap(),
                 bid: bid.parse::<u32>().unwrap(),

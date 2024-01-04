@@ -1,7 +1,4 @@
-use core::num;
 use std::{collections::HashMap, str::FromStr};
-
-use itertools::Itertools;
 
 pub fn run(input: &str) -> anyhow::Result<String> {
     let mut hand_bids = parse(input);
@@ -18,7 +15,7 @@ fn parse(input: &str) -> Vec<HandBids> {
     input
         .lines()
         .map(|line| {
-            let (hand, bid) = line.split_once(" ").unwrap();
+            let (hand, bid) = line.split_once(' ').unwrap();
             HandBids {
                 hand: Hand::from_str(hand).unwrap(),
                 bid: bid.parse::<u32>().unwrap(),
