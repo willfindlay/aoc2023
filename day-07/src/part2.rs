@@ -163,7 +163,7 @@ T55J5 684
 KK677 28
 KTJJT 220
 QQQJA 483";
-        assert_eq!("6440", run(input)?);
+        assert_eq!("5905", run(input)?);
 
         Ok(())
     }
@@ -187,7 +187,7 @@ QQQJA 483";
 
         let hand1 = Hand::from_str("AAA4A").expect("parse");
         let hand2 = Hand::from_str("AJAAA").expect("parse");
-        assert!(hand1 > hand2);
+        assert!(hand2 > hand1);
     }
 
     #[test]
